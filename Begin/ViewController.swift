@@ -119,11 +119,16 @@ class ViewController: UIViewController {
             default: println("Default")
         }
         
+        sayHello("Children")
+        sayHello("")
         
         
+        func buildGreeting(name: String = "World") -> String {
+            return "Hello" + name
+        }
         
-        
-        
+        let greeting = buildGreeting()
+
         
         
         super.viewDidLoad()
@@ -134,7 +139,10 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    func sayHello(name: String){
+        println("Hello \(name)")
+    }
+    
 }
 
